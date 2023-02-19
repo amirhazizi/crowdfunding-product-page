@@ -28,6 +28,11 @@ nav {
 }
 
 .selection-modal {
-    box-shadow: 0 0 0 1500px rgba(0, 0, 0, 0.604);
+    box-shadow: 0 0 0 150rem rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.success-modal {
+    box-shadow: 0 0 0 150rem rgba(0, 0, 0, 0.5);
     z-index: 2;
 }

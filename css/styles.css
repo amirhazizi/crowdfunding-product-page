@@ -791,6 +791,16 @@ video {
   padding: 1.5rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -952,6 +962,11 @@ nav {
 }
 
 .selection-modal {
-  box-shadow: 0 0 0 1500px rgba(0, 0, 0, 0.604);
+  box-shadow: 0 0 0 150rem rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.success-modal {
+  box-shadow: 0 0 0 150rem rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
