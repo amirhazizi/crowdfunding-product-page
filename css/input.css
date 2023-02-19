@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* global css */
 html {
     font-size: 16px;
+}
+
+a {
+    display: inline-block;
+}
+
+/* header */
+header {
+    background: url('../images/image-hero-mobile.jpg') center/cover no-repeat;
+    height: 18rem;
+}
+
+nav {
+    position: relative;
+    z-index: 1;
+}
+
+aside {
+    box-shadow: 0 20px 150px 100px rgba(0, 0, 0, 0.604);
+    z-index: 0;
 }
