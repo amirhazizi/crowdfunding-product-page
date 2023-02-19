@@ -22,7 +22,12 @@ nav {
     z-index: 1;
 }
 
-aside {
+.submenu {
     box-shadow: 0 20px 150px 100px rgba(0, 0, 0, 0.604);
     z-index: 0;
+}
+
+.selection-modal {
+    box-shadow: 0 0 0 1500px rgba(0, 0, 0, 0.604);
+    z-index: 2;
 }

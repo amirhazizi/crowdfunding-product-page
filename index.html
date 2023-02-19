@@ -9,6 +9,8 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css" />
     <!-- styles.css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <!-- fonts.css -->
@@ -30,7 +32,7 @@
     </header>
     <!-- submenu -->
     <aside
-      class="invisible absolute rounded-xl bg-white w-5/6 top-20 left-1/2 -translate-x-1/2"
+      class="submenu invisible absolute rounded-xl bg-white w-5/6 top-20 left-1/2 -translate-x-1/2"
     >
       <!-- links -->
       <ul>
@@ -203,7 +205,7 @@
                 Pledge $200 or more
               </h2>
             </div>
-            <p class="text-cl_Darkgray text-sm leading-6">
+            <p class="text-cl_Darkgray text-sm leading-7">
               You get two Special Edition Mahogany stands, a Backer T-Shirt, and
               a personal thank you. You’ll be added to our Backer member list.
               Shipping is included.
@@ -223,35 +225,179 @@
       </article>
     </section>
     <!-- Selection modal start -->
-
-    Back this project Want to support us in bringing Mastercraft Bamboo Monitor
-    Riser out in the world? Pledge with no reward Choose to support us without a
-    reward if you simply believe in our project. As a backer, you will be signed
-    up to receive product updates via email. Bamboo Stand Pledge $25 or more You
-    get an ergonomic stand made of natural bamboo. You've helped us launch our
-    promotional campaign, and you’ll be added to a special Backer member list.
-    101 left
-
-    <!-- Selected pledge start -->
-    Enter your pledge $25 Continue
-    <!-- Selected pledge end -->
-
-    Black Edition Stand Pledge $75 or more You get a Black Special Edition
-    computer stand and a personal thank you. You’ll be added to our Backer
-    member list. Shipping is included. 64 left
-
-    <!-- Selected pledge start -->
-    Enter your pledge $75 Continue
-    <!-- Selected pledge end -->
-
-    Mahogany Special Edition Pledge $200 or more You get two Special Edition
-    Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-    to our Backer member list. Shipping is included. 0 left
-
-    <!-- Selected pledge  start -->
-    Enter your pledge $200 Continue
-    <!-- Selected pledge end -->
-
+    <aside
+      class="selection-modal absolute top-1/4 left-1/2 p-4 py-7 space-y-5 bg-white w-11/12 rounded-lg -translate-x-1/2 hidden"
+    >
+      <!-- header -->
+      <div class="flex justify-between items-center">
+        <h1 class="font-bold text-xl">Back this project</h1>
+        <img src="./images/icon-close-modal.svg" alt="" />
+      </div>
+      <!-- desc -->
+      <p class="text-cl_Darkgray">
+        Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
+        the world?
+      </p>
+      <!-- project 1 -->
+      <div class="p-5 border rounded-lg space-y-5">
+        <div class="flex space-x-5 items-center">
+          <div
+            class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400"
+          ></div>
+          <h2 class="font-bold">Pledge with no reward</h2>
+        </div>
+        <p class="text-cl_Darkgray leading-7 pt-4">
+          Choose to support us without a reward if you simply believe in our
+          project. As a backer, you will be signed up to receive product updates
+          via email.
+        </p>
+      </div>
+      <!-- end of project 1 -->
+      <!-- project 2 -->
+      <div class="border rounded-lg">
+        <div class="space-y-5 p-5">
+          <div class="flex space-x-5 items-center">
+            <div
+              class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400"
+            ></div>
+            <div>
+              <h2 class="font-bold">Bamboo Stand</h2>
+              <h2 class="font-medium text-cl_Moderatecyan">
+                Pledge $25 or more
+              </h2>
+            </div>
+          </div>
+          <p class="text-cl_Darkgray leading-7 pt-4">
+            You get an ergonomic stand made of natural bamboo. You've helped us
+            launch our promotional campaign, and you’ll be added to a special
+            Backer member list.
+          </p>
+          <div class="flex space-x-2 items-center">
+            <h1 class="text-2xl font-bold">101</h1>
+            <h2 class="text-cl_Darkgray">left</h2>
+          </div>
+        </div>
+        <!-- Selected pledge start -->
+        <div class="border-t py-5 pt-8">
+          <h2 class="text-cl_Darkgray text-center">Enter your pledge</h2>
+          <div class="flex p-5 items-center space-x-6">
+            <div class="relative w-2/3">
+              <input
+                class="w-full border rounded-full pl-12 py-4 font-bold text-lg"
+                type="text"
+                value="25"
+              />
+              <i
+                class="fa-solid fa-dollar-sign absolute top-1/2 left-4 -translate-y-1/2 text-cl_Darkgray"
+              ></i>
+            </div>
+            <button
+              class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full"
+            >
+              Continue
+            </button>
+          </div>
+          <!-- Selected pledge end -->
+        </div>
+      </div>
+      <!-- end of project 2 -->
+      <!-- project 3 -->
+      <div class="border rounded-lg">
+        <div class="space-y-5 p-5">
+          <div class="flex space-x-5 items-center">
+            <div
+              class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400"
+            ></div>
+            <div>
+              <h2 class="font-bold">Black Edition Stand</h2>
+              <h2 class="font-medium text-cl_Moderatecyan">
+                Pledge $75 or more
+              </h2>
+            </div>
+          </div>
+          <p class="text-cl_Darkgray leading-7 pt-4">
+            You get a Black Special Edition computer stand and a personal thank
+            you. You’ll be added to our Backer member list. Shipping is
+            included.
+          </p>
+          <div class="flex space-x-2 items-center">
+            <h1 class="text-2xl font-bold">64</h1>
+            <h2 class="text-cl_Darkgray">left</h2>
+          </div>
+        </div>
+        <!-- Selected pledge start -->
+        <div class="border-t py-5 pt-8">
+          <h2 class="text-cl_Darkgray text-center">Enter your pledge</h2>
+          <div class="flex p-5 items-center space-x-6">
+            <div class="relative w-2/3">
+              <input
+                class="w-full border rounded-full pl-12 py-4 font-bold text-lg"
+                type="text"
+                value="75"
+              />
+              <i
+                class="fa-solid fa-dollar-sign absolute top-1/2 left-4 -translate-y-1/2 text-cl_Darkgray"
+              ></i>
+            </div>
+            <button
+              class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full"
+            >
+              Continue
+            </button>
+          </div>
+          <!-- Selected pledge end -->
+        </div>
+      </div>
+      <!-- end of project 3 -->
+      <!-- project 4 -->
+      <div class="border rounded-lg opacity-50">
+        <div class="space-y-5 p-5">
+          <div class="flex space-x-5 items-center">
+            <div
+              class="h-3 w-3 rounded-full outline outline-offset-4 outline-1 outline-gray-400"
+            ></div>
+            <div>
+              <h2 class="font-bold">Mahogany Special Edition</h2>
+              <h2 class="font-medium text-cl_Moderatecyan">
+                Pledge $200 or more
+              </h2>
+            </div>
+          </div>
+          <p class="text-cl_Darkgray leading-7 pt-4">
+            You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
+            personal thank you. You’ll be added to our Backer member list.
+            Shipping is included.
+          </p>
+          <div class="flex space-x-2 items-center">
+            <h1 class="text-2xl font-bold">0</h1>
+            <h2 class="text-cl_Darkgray">left</h2>
+          </div>
+        </div>
+        <!-- Selected pledge start -->
+        <div class="hidden border-t py-5 pt-8">
+          <h2 class="text-cl_Darkgray text-center">Enter your pledge</h2>
+          <div class="flex p-5 items-center space-x-6">
+            <div class="relative w-2/3">
+              <input
+                class="w-full border rounded-full pl-12 py-4 font-bold text-lg"
+                type="text"
+                value="200"
+              />
+              <i
+                class="fa-solid fa-dollar-sign absolute top-1/2 left-4 -translate-y-1/2 text-cl_Darkgray"
+              ></i>
+            </div>
+            <button
+              class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full"
+            >
+              Continue
+            </button>
+          </div>
+          <!-- Selected pledge end -->
+        </div>
+      </div>
+      <!-- end of project 4 -->
+    </aside>
     <!-- Selection modal end -->
 
     <!-- Success modal start -->
