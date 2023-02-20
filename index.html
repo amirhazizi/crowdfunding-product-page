@@ -27,13 +27,30 @@
         <!-- logo -->
         <img src="./images/logo.svg" alt="logo.svg" />
         <!-- hamburger -->
-        <img
-          class="md:hidden"
-          src="./images/icon-hamburger.svg"
-          alt="icon-hamburger.svg"
-        />
+        <button id="menu-btn" class="md:hidden">
+          <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+            <g
+              class="hover:fill-gray-400 transition-colors"
+              fill="#FFF"
+              fill-rule="evenodd"
+            >
+              <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
+            </g>
+          </svg>
+        </button>
         <!-- close icon -->
-        <img class="hidden" src="./images/icon-close-menu.svg" alt="" />
+        <button id="close-btn" class="disable-btn">
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <g
+              class="hover:fill-gray-400 transition-colors"
+              fill="#FFF"
+              fill-rule="evenodd"
+            >
+              <path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z" />
+              <path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z" />
+            </g>
+          </svg>
+        </button>
         <!-- list navi -->
         <ul class="hidden md:flex md:space-x-3">
           <li>
@@ -62,16 +79,30 @@
     </header>
     <!-- submenu -->
     <aside
-      class="submenu invisible absolute rounded-xl bg-white w-5/6 top-20 left-1/2 -translate-x-1/2"
+      class="submenu public-transition absolute rounded-xl bg-white w-5/6 top-20 left-1/2"
     >
       <!-- links -->
       <ul>
-        <li><a class="font-medium p-5 border-b w-full" href="#">About</a></li>
         <li>
-          <a class="font-medium p-5 border-b w-full" href="#">Discover</a>
+          <a
+            class="font-medium p-5 border-b w-full transition-colors hover:text-cl_Moderatecyan"
+            href="#"
+            >About</a
+          >
         </li>
         <li>
-          <a class="font-medium p-5 w-full" href="#">Get Started</a>
+          <a
+            class="font-medium p-5 border-b w-full transition-colors hover:text-cl_Moderatecyan"
+            href="#"
+            >Discover</a
+          >
+        </li>
+        <li>
+          <a
+            class="font-medium p-5 w-full transition-colors hover:text-cl_Moderatecyan"
+            href="#"
+            >Get Started</a
+          >
         </li>
       </ul>
     </aside>
@@ -101,14 +132,21 @@
           <!-- btns -->
           <div class="flex items-center space-x-2 md:pt-4 md:justify-between">
             <button
+              id="back-this-project-btn"
               class="w-3/4 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full md:w-1/3 transition-colors hover:bg-cl_Darkcyan"
             >
               Back this project
             </button>
             <button
-              class="flex items-center md:space-x-4 md:bg-gray-200 md:rounded-full"
+              id="bookmark-btn"
+              class="flex items-center md:space-x-4 md:bg-gray-200 rounded-full"
             >
-              <img src="./images/icon-bookmark.svg" alt="icon-bookmark.svg" />
+              <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+                  <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+                </g>
+              </svg>
               <p class="hidden md:block font-black text-cl_Darkgray pr-5">
                 Bookmark
               </p>
@@ -282,12 +320,12 @@
     </section>
     <!-- Selection modal start -->
     <aside
-      class="selection-modal absolute top-1/4 max-w-3xl md:top-36 left-1/2 p-4 py-7 space-y-5 bg-white w-11/12 rounded-lg -translate-x-1/2 md:p-9"
+      class="selection-modal public-transition absolute top-1/4 max-w-3xl md:top-36 left-1/2 p-4 py-7 space-y-5 bg-white w-11/12 rounded-lg md:p-9"
     >
       <!-- header -->
       <div class="flex justify-between items-center">
         <h1 class="font-bold text-xl md:text-2xl">Back this project</h1>
-        <button>
+        <button id="close-modal-btn">
           <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z"
@@ -522,7 +560,7 @@
 
     <!-- Success modal start -->
     <aside
-      class="success-modal absolute top-1/4 left-1/2 p-4 py-10 space-y-6 bg-white w-11/12 rounded-lg -translate-x-1/2 text-center max-w-xl md:space-y-8 md:py-12 hidden"
+      class="success-modal absolute top-1/4 left-1/2 p-4 py-10 space-y-6 bg-white w-11/12 rounded-lg -translate-x-1/2 text-center max-w-xl md:space-y-8 md:py-12 invisible"
     >
       <img
         class="mx-auto md:h-24"
@@ -542,5 +580,7 @@
       </button>
     </aside>
     <!-- Success modal end -->
+    <!-- app.js -->
+    <script src="./js/app.js" type="module"></script>
   </body>
 </html>
