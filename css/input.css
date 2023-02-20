@@ -17,21 +17,32 @@ header {
     height: 18rem;
 }
 
+/* header media queris */
+@media (min-width:768px) {
+    header {
+        background-image: url('../images/image-hero-desktop.jpg');
+    }
+}
+
+/* nav */
 nav {
     position: relative;
     z-index: 1;
 }
 
+/* submenu */
 .submenu {
     box-shadow: 0 20px 150px 100px rgba(0, 0, 0, 0.604);
     z-index: 0;
 }
 
+/* selection modal */
 .selection-modal {
     box-shadow: 0 0 0 150rem rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
+/* success modal */
 .success-modal {
     box-shadow: 0 0 0 150rem rgba(0, 0, 0, 0.5);
     z-index: 2;
