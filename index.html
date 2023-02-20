@@ -19,15 +19,33 @@
   </head>
   <body>
     <!-- header -->
-    <header>
+    <header class="relative">
       <!-- nav -->
-      <nav class="flex justify-between p-6 items-center">
+      <nav
+        class="flex justify-between p-6 items-center md:p-5 md:px-20 md:max-w-7xl md:mx-auto"
+      >
         <!-- logo -->
         <img src="./images/logo.svg" alt="logo.svg" />
         <!-- hamburger -->
-        <img src="./images/icon-hamburger.svg" alt="icon-hamburger.svg" />
+        <img
+          class="md:hidden"
+          src="./images/icon-hamburger.svg"
+          alt="icon-hamburger.svg"
+        />
         <!-- close icon -->
         <img class="hidden" src="./images/icon-close-menu.svg" alt="" />
+        <!-- list navi -->
+        <ul class="hidden md:flex md:space-x-3">
+          <li>
+            <a class="text-white font-medium p-5" href="#">About</a>
+          </li>
+          <li>
+            <a class="text-white font-medium p-5" href="#">Discover</a>
+          </li>
+          <li>
+            <a class="text-white font-medium p-5" href="#">Get Started</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <!-- submenu -->
@@ -49,7 +67,7 @@
     <section class="relative bg-gray-100 space-y-5">
       <!-- article 1 -->
       <article
-        class="relative w-5/6 mx-auto -top-10 bg-white rounded-xl border"
+        class="relative w-5/6 mx-auto -top-10 bg-white rounded-xl border max-w-3xl md:-top-16"
       >
         <!-- article logo -->
         <img
@@ -88,7 +106,7 @@
       </article>
       <!-- article 2 -->
       <article
-        class="relative w-5/6 mx-auto -top-10 bg-white rounded-xl border"
+        class="relative w-5/6 mx-auto -top-10 bg-white rounded-xl border max-w-3xl md:-top-16"
       >
         <!-- container -->
         <div class="p-5 py-9 md:p-10">
@@ -141,7 +159,7 @@
       </article>
       <!-- about this projects -->
       <article
-        class="relative w-5/6 mx-auto -top-10 bg-white rounded-xl border p-5 pb-10"
+        class="relative w-5/6 mx-auto -top-10 bg-white rounded-xl border p-5 pb-10 max-w-3xl md:-top-16"
       >
         <div class="space-y-8">
           <h1 class="text-xl font-bold">About this project</h1>
@@ -252,62 +270,90 @@
     </section>
     <!-- Selection modal start -->
     <aside
-      class="selection-modal absolute top-1/4 left-1/2 p-4 py-7 space-y-5 bg-white w-11/12 rounded-lg -translate-x-1/2 hidden"
+      class="selection-modal absolute top-1/4 max-w-3xl md:top-36 left-1/2 p-4 py-7 space-y-5 bg-white w-11/12 rounded-lg -translate-x-1/2 md:p-9 hidden"
     >
       <!-- header -->
       <div class="flex justify-between items-center">
-        <h1 class="font-bold text-xl">Back this project</h1>
+        <h1 class="font-bold text-xl md:text-2xl">Back this project</h1>
         <img src="./images/icon-close-modal.svg" alt="" />
       </div>
       <!-- desc -->
-      <p class="text-cl_Darkgray">
+      <p class="text-cl_Darkgray md:pb-4">
         Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
         the world?
       </p>
       <!-- project 1 -->
-      <div class="p-5 border rounded-lg space-y-5">
-        <div class="flex space-x-5 items-center">
-          <div
-            class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400"
-          ></div>
-          <h2 class="font-bold">Pledge with no reward</h2>
+      <div
+        class="p-5 border rounded-lg space-y-5 md:flex md:space-y-0 md:items-start md:justify-between md:p-7"
+      >
+        <div
+          class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400 hidden md:block md:mt-3"
+        ></div>
+        <div class="md:w-11/12">
+          <div class="flex space-x-5 items-center md:space-x-0">
+            <div
+              class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400 md:hidden"
+            ></div>
+            <h2 class="font-bold">Pledge with no reward</h2>
+          </div>
+          <p class="text-cl_Darkgray leading-7 pt-4 md:text-sm md:leading-6">
+            Choose to support us without a reward if you simply believe in our
+            project. As a backer, you will be signed up to receive product
+            updates via email.
+          </p>
         </div>
-        <p class="text-cl_Darkgray leading-7 pt-4">
-          Choose to support us without a reward if you simply believe in our
-          project. As a backer, you will be signed up to receive product updates
-          via email.
-        </p>
       </div>
       <!-- end of project 1 -->
+
       <!-- project 2 -->
       <div class="border rounded-lg">
-        <div class="space-y-5 p-5">
-          <div class="flex space-x-5 items-center">
-            <div
-              class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400"
-            ></div>
-            <div>
-              <h2 class="font-bold">Bamboo Stand</h2>
-              <h2 class="font-medium text-cl_Moderatecyan">
-                Pledge $25 or more
-              </h2>
+        <div
+          class="space-y-5 p-5 md:flex md:space-y-0 md:items-start md:justify-between md:p-7"
+        >
+          <div
+            class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400 hidden md:block md:mt-3"
+          ></div>
+          <div class="md:w-11/12">
+            <div class="flex space-x-5 items-center md:space-x-0">
+              <div
+                class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400 md:hidden"
+              ></div>
+              <div class="md:flex md:items-center md:w-full md:justify-between">
+                <div class="md:flex md:space-x-4">
+                  <h2 class="font-bold">Bamboo Stand</h2>
+                  <h2 class="font-medium text-cl_Moderatecyan md:font-bold">
+                    Pledge $25 or more
+                  </h2>
+                </div>
+
+                <div
+                  class="md:flex space-x-2 items-center hidden md:justify-self-end"
+                >
+                  <h1 class="text-2xl font-bold md:text-lg">101</h1>
+                  <h2 class="text-cl_Darkgray">left</h2>
+                </div>
+              </div>
             </div>
-          </div>
-          <p class="text-cl_Darkgray leading-7 pt-4">
-            You get an ergonomic stand made of natural bamboo. You've helped us
-            launch our promotional campaign, and you’ll be added to a special
-            Backer member list.
-          </p>
-          <div class="flex space-x-2 items-center">
-            <h1 class="text-2xl font-bold">101</h1>
-            <h2 class="text-cl_Darkgray">left</h2>
+            <p class="text-cl_Darkgray leading-7 pt-4 md:text-sm md:leading-6">
+              You get an ergonomic stand made of natural bamboo. You've helped
+              us launch our promotional campaign, and you’ll be added to a
+              special Backer member list.
+            </p>
+            <div class="mt-4 flex space-x-2 items-center md:hidden">
+              <h1 class="text-2xl font-bold">101</h1>
+              <h2 class="text-cl_Darkgray">left</h2>
+            </div>
           </div>
         </div>
         <!-- Selected pledge start -->
-        <div class="border-t py-5 pt-8">
+        <div
+          class="border-t py-5 pt-8 md:flex md:items-center md:p-5 md:justify-between"
+        >
           <h2 class="text-cl_Darkgray text-center">Enter your pledge</h2>
-          <div class="flex p-5 items-center space-x-6">
-            <div class="relative w-2/3">
+          <div
+            class="flex p-5 items-center space-x-6 md:space-x-5 md:p-0 md:justify-end"
+          >
+            <div class="relative w-2/3 md:w-2/6">
               <input
                 class="w-full border rounded-full pl-12 py-4 font-bold text-lg"
                 type="text"
@@ -318,7 +364,7 @@
               ></i>
             </div>
             <button
-              class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full"
+              class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full md:w-2/6"
             >
               Continue
             </button>
@@ -327,35 +373,56 @@
         </div>
       </div>
       <!-- end of project 2 -->
+
       <!-- project 3 -->
       <div class="border rounded-lg">
-        <div class="space-y-5 p-5">
-          <div class="flex space-x-5 items-center">
-            <div
-              class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400"
-            ></div>
-            <div>
-              <h2 class="font-bold">Black Edition Stand</h2>
-              <h2 class="font-medium text-cl_Moderatecyan">
-                Pledge $75 or more
-              </h2>
+        <div
+          class="space-y-5 p-5 md:flex md:space-y-0 md:items-start md:justify-between md:p-7"
+        >
+          <div
+            class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400 hidden md:block md:mt-3"
+          ></div>
+          <div class="md:w-11/12">
+            <div class="flex space-x-5 items-center md:space-x-0">
+              <div
+                class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400 md:hidden"
+              ></div>
+              <div class="md:flex md:items-center md:w-full md:justify-between">
+                <div class="md:flex md:space-x-4">
+                  <h2 class="font-bold">Black Edition Stand</h2>
+                  <h2 class="font-medium text-cl_Moderatecyan md:font-bold">
+                    Pledge $75 or more
+                  </h2>
+                </div>
+
+                <div
+                  class="md:flex space-x-2 items-center hidden md:justify-self-end"
+                >
+                  <h1 class="text-2xl font-bold md:text-lg">64</h1>
+                  <h2 class="text-cl_Darkgray">left</h2>
+                </div>
+              </div>
             </div>
-          </div>
-          <p class="text-cl_Darkgray leading-7 pt-4">
-            You get a Black Special Edition computer stand and a personal thank
-            you. You’ll be added to our Backer member list. Shipping is
-            included.
-          </p>
-          <div class="flex space-x-2 items-center">
-            <h1 class="text-2xl font-bold">64</h1>
-            <h2 class="text-cl_Darkgray">left</h2>
+            <p class="text-cl_Darkgray leading-7 pt-4 md:text-sm md:leading-6">
+              You get a Black Special Edition computer stand and a personal
+              thank you. You’ll be added to our Backer member list. Shipping is
+              included.
+            </p>
+            <div class="mt-4 flex space-x-2 items-center md:hidden">
+              <h1 class="text-2xl font-bold">64</h1>
+              <h2 class="text-cl_Darkgray">left</h2>
+            </div>
           </div>
         </div>
         <!-- Selected pledge start -->
-        <div class="border-t py-5 pt-8">
+        <div
+          class="border-t py-5 pt-8 md:flex md:items-center md:p-5 md:justify-between"
+        >
           <h2 class="text-cl_Darkgray text-center">Enter your pledge</h2>
-          <div class="flex p-5 items-center space-x-6">
-            <div class="relative w-2/3">
+          <div
+            class="flex p-5 items-center space-x-6 md:space-x-5 md:p-0 md:justify-end"
+          >
+            <div class="relative w-2/3 md:w-2/6">
               <input
                 class="w-full border rounded-full pl-12 py-4 font-bold text-lg"
                 type="text"
@@ -366,7 +433,7 @@
               ></i>
             </div>
             <button
-              class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full"
+              class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full md:w-2/6"
             >
               Continue
             </button>
@@ -375,63 +442,63 @@
         </div>
       </div>
       <!-- end of project 3 -->
+
       <!-- project 4 -->
       <div class="border rounded-lg opacity-50">
-        <div class="space-y-5 p-5">
-          <div class="flex space-x-5 items-center">
-            <div
-              class="h-3 w-3 rounded-full outline outline-offset-4 outline-1 outline-gray-400"
-            ></div>
-            <div>
-              <h2 class="font-bold">Mahogany Special Edition</h2>
-              <h2 class="font-medium text-cl_Moderatecyan">
-                Pledge $200 or more
-              </h2>
+        <div
+          class="space-y-5 p-5 md:flex md:space-y-0 md:items-start md:justify-between md:p-7"
+        >
+          <div
+            class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400 hidden md:block md:mt-3"
+          ></div>
+          <div class="md:w-11/12">
+            <div class="flex space-x-5 items-center md:space-x-0">
+              <div
+                class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400 md:hidden"
+              ></div>
+              <div class="md:flex md:items-center md:w-full md:justify-between">
+                <div class="md:flex md:space-x-4">
+                  <h2 class="font-bold">Mahogany Special Edition</h2>
+                  <h2 class="font-medium text-cl_Moderatecyan md:font-bold">
+                    Pledge $200 or more
+                  </h2>
+                </div>
+
+                <div
+                  class="md:flex space-x-2 items-center hidden md:justify-self-end"
+                >
+                  <h1 class="text-2xl font-bold md:text-lg">0</h1>
+                  <h2 class="text-cl_Darkgray">left</h2>
+                </div>
+              </div>
+            </div>
+            <p class="text-cl_Darkgray leading-7 pt-4 md:text-sm md:leading-6">
+              You get two Special Edition Mahogany stands, a Backer T-Shirt, and
+              a personal thank you. You’ll be added to our Backer member list.
+              Shipping is included.
+            </p>
+            <div class="mt-4 flex space-x-2 items-center md:hidden">
+              <h1 class="text-2xl font-bold">64</h1>
+              <h2 class="text-cl_Darkgray">left</h2>
             </div>
           </div>
-          <p class="text-cl_Darkgray leading-7 pt-4">
-            You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
-            personal thank you. You’ll be added to our Backer member list.
-            Shipping is included.
-          </p>
-          <div class="flex space-x-2 items-center">
-            <h1 class="text-2xl font-bold">0</h1>
-            <h2 class="text-cl_Darkgray">left</h2>
-          </div>
-        </div>
-        <!-- Selected pledge start -->
-        <div class="hidden border-t py-5 pt-8">
-          <h2 class="text-cl_Darkgray text-center">Enter your pledge</h2>
-          <div class="flex p-5 items-center space-x-6">
-            <div class="relative w-2/3">
-              <input
-                class="w-full border rounded-full pl-12 py-4 font-bold text-lg"
-                type="text"
-                value="200"
-              />
-              <i
-                class="fa-solid fa-dollar-sign absolute top-1/2 left-4 -translate-y-1/2 text-cl_Darkgray"
-              ></i>
-            </div>
-            <button
-              class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full"
-            >
-              Continue
-            </button>
-          </div>
-          <!-- Selected pledge end -->
         </div>
       </div>
       <!-- end of project 4 -->
     </aside>
     <!-- Selection modal end -->
+
     <!-- Success modal start -->
     <aside
-      class="success-modal absolute top-1/4 left-1/2 p-4 py-10 space-y-6 bg-white w-11/12 rounded-lg -translate-x-1/2 text-center hidden"
+      class="success-modal absolute top-1/4 left-1/2 p-4 py-10 space-y-6 bg-white w-11/12 rounded-lg -translate-x-1/2 text-center max-w-xl md:space-y-8 md:py-12 hidden"
     >
-      <img class="mx-auto" src="./images/icon-check.svg" alt="icon-check.svg" />
-      <h1 class="text-xl font-bold">Thanks for your support!</h1>
-      <p class="text-cl_Darkgray">
+      <img
+        class="mx-auto md:h-24"
+        src="./images/icon-check.svg"
+        alt="icon-check.svg"
+      />
+      <h1 class="text-xl font-bold md:text-2xl">Thanks for your support!</h1>
+      <p class="text-cl_Darkgray md:max-w-md md:mx-auto">
         Your pledge brings us one step closer to sharing Mastercraft Bamboo
         Monitor Riser worldwide. You will get an email once our campaign is
         completed.
