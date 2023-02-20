@@ -5,7 +5,8 @@ const backProjectBtn = document.getElementById("back-this-project-btn")
 const closeModalBtn = document.getElementById("close-modal-btn")
 const submenu = document.querySelector(".submenu")
 const selectionModal = document.querySelector(".selection-modal")
-
+const projectBtns = document.querySelectorAll(".project-btn")
+const modalProjects = document.querySelectorAll(".modal-project")
 menuBtn.addEventListener("click", () => {
   submenu.classList.add("active-modal")
   menuBtn.classList.add("disable-btn")
@@ -24,8 +25,36 @@ bootmarkBtn.addEventListener("click", () => {
   bootmarkBtn.classList.toggle("bookmarked")
 })
 backProjectBtn.addEventListener("click", () => {
-  selectionModal.classList.add("active-modal")
+  showModal(selectionModal.offsetTop)
+  modalProjects.forEach((modalproject) => {
+    if (modalproject.classList.contains("selected-project")) {
+      modalproject.classList.remove("selected-project")
+    }
+  })
 })
 closeModalBtn.addEventListener("click", () => {
   selectionModal.classList.remove("active-modal")
 })
+projectBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modalProjects.forEach((modalproject) => {
+      if (modalproject.classList.contains("selected-project")) {
+        modalproject.classList.remove("selected-project")
+      }
+      if (btn.dataset.id !== "mahogany-special-edition") {
+        if (btn.dataset.id === modalproject.dataset.id) {
+          showModal(modalproject.offsetTop)
+          modalproject.classList.add("selected-project")
+          // console.log(btn, modalproject)
+        }
+      }
+    })
+  })
+})
+function showModal(pos) {
+  selectionModal.classList.add("active-modal")
+  window.scrollTo({
+    left: 0,
+    top: pos,
+  })
+}

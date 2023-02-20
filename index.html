@@ -248,7 +248,8 @@
                 <h2 class="text-cl_Darkgray">left</h2>
               </div>
               <button
-                class="w-3/4 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full md:w-1/3 transition-colors hover:bg-cl_Darkcyan"
+                data-id="bamboo-stand"
+                class="project-btn w-3/4 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full md:w-1/3 transition-colors hover:bg-cl_Darkcyan"
               >
                 Select Reward
               </button>
@@ -278,7 +279,8 @@
                 <h2 class="text-cl_Darkgray">left</h2>
               </div>
               <button
-                class="w-3/4 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full md:w-1/3 transition-colors hover:bg-cl_Darkcyan"
+                data-id="black-edition-stand"
+                class="project-btn w-3/4 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full md:w-1/3 transition-colors hover:bg-cl_Darkcyan"
               >
                 Select Reward
               </button>
@@ -308,7 +310,8 @@
                 <h2 class="text-cl_Darkgray">left</h2>
               </div>
               <button
-                class="w-3/4 bg-cl_Darkgray py-4 text-white font-medium rounded-full md:w-1/3 transition-colors hover:bg-gray-500"
+                data-id="mahogany-special-edition"
+                class="project-btn w-3/4 bg-cl_Darkgray py-4 text-white font-medium rounded-full md:w-1/3 transition-colors hover:bg-gray-500"
               >
                 Out of Stock
               </button>
@@ -344,10 +347,12 @@
       </p>
       <!-- project 1 -->
       <div
-        class="p-5 border rounded-lg space-y-5 md:flex md:space-y-0 md:items-start md:justify-between md:p-7"
+        data-id="pledge-with-no-reward"
+        class="modal-project p-5 border rounded-lg space-y-5 md:flex md:space-y-0 md:items-start md:justify-between md:p-7"
       >
         <div
-          class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400 hidden md:block md:mt-3"
+          id="circle"
+          class="h-3 w-3 rounded-full outline outline-offset-4 outline-1 outline-gray-400 hidden md:block md:mt-3"
         ></div>
         <div class="md:w-11/12">
           <div class="flex space-x-5 items-center md:space-x-0">
@@ -368,12 +373,13 @@
       <!-- end of project 1 -->
 
       <!-- project 2 -->
-      <div class="border rounded-lg">
+      <div data-id="bamboo-stand" class="modal-project border rounded-lg">
         <div
           class="space-y-5 p-5 md:flex md:space-y-0 md:items-start md:justify-between md:p-7"
         >
           <div
-            class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400 hidden md:block md:mt-3"
+            id="circle"
+            class="h-3 w-3 rounded-full outline outline-offset-4 outline-1 outline-gray-400 hidden md:block md:mt-3"
           ></div>
           <div class="md:w-11/12">
             <div class="flex space-x-5 items-center md:space-x-0">
@@ -412,28 +418,30 @@
           </div>
         </div>
         <!-- Selected pledge start -->
-        <div
-          class="border-t py-5 pt-8 md:flex md:items-center md:p-5 md:justify-between"
-        >
-          <h2 class="text-cl_Darkgray text-center">Enter your pledge</h2>
+        <div id="enter-pledge" class="hidden">
           <div
-            class="flex p-5 items-center space-x-6 md:space-x-5 md:p-0 md:justify-end"
+            class="border-t py-5 pt-8 md:flex md:items-center md:p-5 md:justify-between"
           >
-            <div class="relative w-2/3 md:w-2/6">
-              <input
-                class="w-full border rounded-full pl-12 py-4 font-bold text-lg focus:outline-cl_Moderatecyan"
-                type="text"
-                value="25"
-              />
-              <i
-                class="fa-solid fa-dollar-sign absolute top-1/2 left-4 -translate-y-1/2 text-cl_Darkgray"
-              ></i>
-            </div>
-            <button
-              class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full md:w-2/6 transition-colors hover:bg-cl_Darkcyan"
+            <h2 class="text-cl_Darkgray text-center">Enter your pledge</h2>
+            <div
+              class="flex p-5 items-center space-x-6 md:space-x-5 md:p-0 md:justify-end"
             >
-              Continue
-            </button>
+              <div class="relative w-2/3 md:w-2/6">
+                <input
+                  class="w-full border rounded-full pl-12 py-4 font-bold text-lg focus:outline-cl_Moderatecyan"
+                  type="text"
+                  value="25"
+                />
+                <i
+                  class="fa-solid fa-dollar-sign absolute top-1/2 left-4 -translate-y-1/2 text-cl_Darkgray"
+                ></i>
+              </div>
+              <button
+                class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full md:w-2/6 transition-colors hover:bg-cl_Darkcyan"
+              >
+                Continue
+              </button>
+            </div>
           </div>
           <!-- Selected pledge end -->
         </div>
@@ -441,12 +449,16 @@
       <!-- end of project 2 -->
 
       <!-- project 3 -->
-      <div class="border rounded-lg">
+      <div
+        data-id="black-edition-stand"
+        class="modal-project border rounded-lg"
+      >
         <div
           class="space-y-5 p-5 md:flex md:space-y-0 md:items-start md:justify-between md:p-7"
         >
           <div
-            class="h-3 w-3 bg-cl_Moderatecyan rounded-full outline outline-offset-4 outline-1 outline-gray-400 hidden md:block md:mt-3"
+            id="circle"
+            class="h-3 w-3 rounded-full outline outline-offset-4 outline-1 outline-gray-400 hidden md:block md:mt-3"
           ></div>
           <div class="md:w-11/12">
             <div class="flex space-x-5 items-center md:space-x-0">
@@ -485,28 +497,30 @@
           </div>
         </div>
         <!-- Selected pledge start -->
-        <div
-          class="border-t py-5 pt-8 md:flex md:items-center md:p-5 md:justify-between"
-        >
-          <h2 class="text-cl_Darkgray text-center">Enter your pledge</h2>
+        <div id="enter-pledge" class="hidden">
           <div
-            class="flex p-5 items-center space-x-6 md:space-x-5 md:p-0 md:justify-end"
+            class="border-t py-5 pt-8 md:flex md:items-center md:p-5 md:justify-between"
           >
-            <div class="relative w-2/3 md:w-2/6">
-              <input
-                class="w-full border rounded-full pl-12 py-4 font-bold text-lg focus:outline-cl_Moderatecyan"
-                type="text"
-                value="75"
-              />
-              <i
-                class="fa-solid fa-dollar-sign absolute top-1/2 left-4 -translate-y-1/2 text-cl_Darkgray"
-              ></i>
-            </div>
-            <button
-              class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full md:w-2/6 transition-colors hover:bg-cl_Darkcyan"
+            <h2 class="text-cl_Darkgray text-center">Enter your pledge</h2>
+            <div
+              class="flex p-5 items-center space-x-6 md:space-x-5 md:p-0 md:justify-end"
             >
-              Continue
-            </button>
+              <div class="relative w-2/3 md:w-2/6">
+                <input
+                  class="w-full border rounded-full pl-12 py-4 font-bold text-lg focus:outline-cl_Moderatecyan"
+                  type="text"
+                  value="75"
+                />
+                <i
+                  class="fa-solid fa-dollar-sign absolute top-1/2 left-4 -translate-y-1/2 text-cl_Darkgray"
+                ></i>
+              </div>
+              <button
+                class="w-2/3 bg-cl_Moderatecyan py-4 text-white font-medium rounded-full md:w-2/6 transition-colors hover:bg-cl_Darkcyan"
+              >
+                Continue
+              </button>
+            </div>
           </div>
           <!-- Selected pledge end -->
         </div>
@@ -514,7 +528,10 @@
       <!-- end of project 3 -->
 
       <!-- project 4 -->
-      <div class="border rounded-lg opacity-50">
+      <div
+        data-id="mahogany-special-edition"
+        class="modal-project border rounded-lg opacity-50"
+      >
         <div
           class="space-y-5 p-5 md:flex md:space-y-0 md:items-start md:justify-between md:p-7"
         >

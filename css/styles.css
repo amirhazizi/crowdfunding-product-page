@@ -976,6 +976,7 @@ video {
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -1032,7 +1033,7 @@ nav {
 
 .selection-modal {
   box-shadow: 0 0 0 150rem rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 3;
   visibility: hidden;
 }
 
@@ -1040,7 +1041,7 @@ nav {
 
 .success-modal {
   box-shadow: 0 0 0 150rem rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 3;
 }
 
 .bookmarked {
@@ -1064,6 +1065,18 @@ nav {
   display: none;
 }
 
+.selected-project {
+  border-color: hsl(176, 50%, 47%);
+}
+
+.selected-project #circle {
+  background: hsl(176, 50%, 47%);
+}
+
+.selected-project #enter-pledge {
+  display: block !important;
+}
+
 .hover\:bg-cl_Darkcyan:hover {
   --tw-bg-opacity: 1;
   background-color: hsl(176 72% 28% / var(--tw-bg-opacity));
@@ -1072,18 +1085,6 @@ nav {
 .hover\:bg-gray-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
-}
-
-.hover\:fill-slate-600:hover {
-  fill: #475569;
-}
-
-.hover\:fill-gray-600:hover {
-  fill: #4b5563;
-}
-
-.hover\:fill-gray-300:hover {
-  fill: #d1d5db;
 }
 
 .hover\:fill-gray-400:hover {
@@ -1095,14 +1096,14 @@ nav {
   color: hsl(176 72% 28% / var(--tw-text-opacity));
 }
 
-.hover\:text-gray-300:hover {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
 .hover\:text-cl_Moderatecyan:hover {
   --tw-text-opacity: 1;
   color: hsl(176 50% 47% / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-70:hover {
@@ -1243,10 +1244,6 @@ nav {
 
   .md\:justify-self-end {
     justify-self: end;
-  }
-
-  .md\:rounded-full {
-    border-radius: 9999px;
   }
 
   .md\:border-r {
