@@ -557,6 +557,10 @@ video {
   visibility: hidden;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -591,6 +595,10 @@ video {
 
 .top-20 {
   top: 5rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .mx-auto {
@@ -756,6 +764,11 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded-t-xl {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -833,6 +846,31 @@ video {
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-px {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.px-px {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .pb-10 {
@@ -926,6 +964,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-cl_Darkcyan {
+  --tw-text-opacity: 1;
+  color: hsl(176 72% 28% / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1028,7 +1071,7 @@ nav {
 /* selection modal */
 
 .selection-modal {
-  box-shadow: 0 0 0 150rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 1500rem rgba(0, 0, 0, 0.5);
   z-index: 3;
   visibility: hidden;
 }
@@ -1036,7 +1079,7 @@ nav {
 /* success modal */
 
 .success-modal {
-  box-shadow: 0 0 0 150rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 1500rem rgba(0, 0, 0, 0.5);
   z-index: 3;
 }
 
