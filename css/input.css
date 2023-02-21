@@ -97,7 +97,7 @@ nav {
     border-color: hsl(176, 50%, 47%);
 }
 
-.selected-project #circle {
+.selected-project .circle {
     background: hsl(176, 50%, 47%);
 }
 
