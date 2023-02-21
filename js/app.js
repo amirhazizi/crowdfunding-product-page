@@ -1,11 +1,13 @@
-const menuBtn = document.querySelector("#menu-btn")
-const closeBtn = document.querySelector("#close-btn")
-const bootmarkBtn = document.getElementById("bookmark-btn")
+// bookmarket function
+import "./components/bookmarkt.js"
+// nav submenu function
+import "./components/navSubmenu.js"
+
+// variables
 const backProjectBtn = document.getElementById("back-this-project-btn")
 const backets = document.querySelectorAll(".backet")
-const bar = document.querySelector("#bar")
+const totalBacketsBar = document.querySelector("#bar")
 const closeModalBtn = document.getElementById("close-modal-btn")
-const submenu = document.querySelector(".submenu")
 const selectionModal = document.querySelector(".selection-modal")
 const successModal = document.querySelector(".success-modal")
 const gotitBtn = document.querySelector("#gotit-btn")
@@ -15,24 +17,7 @@ const formProjects = document.querySelectorAll(".project-form")
 
 let sumbacket = 89914
 let totalbacket = 5007
-
-menuBtn.addEventListener("click", () => {
-  submenu.classList.add("active-modal")
-  menuBtn.classList.add("disable-btn")
-  closeBtn.classList.remove("disable-btn")
-})
-closeBtn.addEventListener("click", () => {
-  submenu.classList.remove("active-modal")
-  menuBtn.classList.remove("disable-btn")
-  closeBtn.classList.add("disable-btn")
-})
-// bookmark click event
-bootmarkBtn.addEventListener("click", () => {
-  if (bootmarkBtn.classList.contains("bookmarked"))
-    bootmarkBtn.lastElementChild.textContent = "Bookmark"
-  else bootmarkBtn.lastElementChild.textContent = "Bookmarked"
-  bootmarkBtn.classList.toggle("bookmarked")
-})
+// back to project btn click event
 backProjectBtn.addEventListener("click", () => {
   scrollWindow(selectionModal.offsetTop)
   selectionModal.classList.add("active-modal")
@@ -40,9 +25,11 @@ backProjectBtn.addEventListener("click", () => {
     diactiveproject(modalproject)
   })
 })
+// selection modal close btn event
 closeModalBtn.addEventListener("click", () => {
   selectionModal.classList.remove("active-modal")
 })
+// modalproject click event
 modalProjects.forEach((modalproject) => {
   modalproject.addEventListener("click", () => {
     modalProjects.forEach((modalproject) => {
@@ -52,6 +39,7 @@ modalProjects.forEach((modalproject) => {
       modalproject.classList.add("selected-project")
   })
 })
+// projectbtn event
 projectBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     modalProjects.forEach((modalproject) => {
@@ -66,6 +54,7 @@ projectBtns.forEach((btn) => {
     })
   })
 })
+// modalprojects form submit event
 formProjects.forEach((form) => {
   form.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -83,10 +72,11 @@ formProjects.forEach((form) => {
     }, 4000)
   })
 })
+// success btn event
 gotitBtn.addEventListener("click", () => {
   successModal.classList.remove("active-modal")
 })
-// domcontentloaded
+// domcontentloaded event
 window.addEventListener("DOMContentLoaded", () => {
   backets.forEach((backet) => {
     let intialValue = 0
@@ -106,25 +96,36 @@ window.addEventListener("DOMContentLoaded", () => {
       backet.textContent = intialValue
     }, 1)
   })
-  const barWidth = Math.floor(sumbacket / 1000)
-  bar.style.width = `${barWidth}%`
+  let intialWidth = 0
+  const finalWidth = Math.floor(sumbacket / 1000)
+  const increaseBarWidth = setInterval(() => {
+    intialWidth += 1
+    if (intialWidth > finalWidth) {
+      totalBacketsBar.style.width = `${finalWidth}%`
+      clearInterval(increaseBarWidth)
+      return
+    }
+    totalBacketsBar.style.width = `${intialWidth}%`
+  }, 1)
 })
+// scroll to project function
 function scrollWindow(pos) {
   window.scrollTo({
     left: 0,
     top: pos,
   })
 }
+// diactive/deselect modal porject
 function diactiveproject(modalproject) {
   if (modalproject.classList.contains("selected-project")) {
     modalproject.classList.remove("selected-project")
   }
 }
+// update backetvalues
 function calculateBackets(value) {
   sumbacket += value
   totalbacket++
-  const barWidth = Math.floor(sumbacket / 1000)
-  bar.style.width = `${barWidth}%`
+  totalBacketsBar.style.width = `${Math.floor(sumbacket / 1000)}%`
   backets.forEach((backet) => {
     backet.innerHTML = 0
     let updateValue = sumbacket
