@@ -35,8 +35,13 @@ modalProjects.forEach((modalproject) => {
     modalProjects.forEach((modalproject) => {
       diactiveproject(modalproject)
     })
-    if (modalproject.dataset.id !== "mahogany-special-edition")
+    if (modalproject.dataset.id !== "mahogany-special-edition") {
       modalproject.classList.add("selected-project")
+      if (modalproject.dataset.id === "pledge-with-no-reward") {
+        selectionModal.classList.remove("active-modal")
+        successModal.classList.add("active-modal")
+      }
+    }
   })
 })
 // projectbtn event
